@@ -21,8 +21,8 @@ endif
 
 # For now this is required as there are places in NimBLE
 # assumingthat pointer is 4 bytes long.
-NIMBLE_CFLAGS := -m32
-NIMBLE_LDFLAGS := -m32
+NIMBLE_CFLAGS :=  -Wall
+NIMBLE_LDFLAGS :=
 
 NIMBLE_INCLUDE := \
 	$(NIMBLE_ROOT)/nimble/include \
