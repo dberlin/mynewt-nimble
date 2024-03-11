@@ -79,6 +79,7 @@ CFLAGS =                    \
     $(INCLUDES)             \
     -g                      \
     -D_GNU_SOURCE           \
+    -Wall                   \
     $(NULL)
 
 LIBS := $(NIMBLE_LDFLAGS) -lrt -lpthread -lstdc++
