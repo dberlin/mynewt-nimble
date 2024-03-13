@@ -1676,7 +1676,7 @@ ble_gap_rx_peroidic_adv_sync_estab(const struct ble_hci_ev_le_subev_periodic_adv
 
         ble_hs_periodic_sync_insert(ble_gap_sync.psync);
     } else {
-        ble_hs_periodic_sync_free(ble_gap_sync.psync);
+          ble_hs_periodic_sync_free(ble_gap_sync.psync);
     }
 
     cb = ble_gap_sync.cb;

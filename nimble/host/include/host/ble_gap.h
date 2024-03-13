@@ -1760,7 +1760,7 @@ struct ble_gap_periodic_sync_params {
 
     /** Synchronization timeout for the periodic advertising train in 10ms units
      */
-    uint16_t sync_timeout;
+    uint16_t  sync_timeout;
 
     /** If reports should be initially disabled when sync is created */
     unsigned int reports_disabled : 1;
