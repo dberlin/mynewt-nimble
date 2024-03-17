@@ -26,6 +26,8 @@
 extern "C" {
 #endif
 
+extern void StatsInc(const char*, const char*, int);
+extern void StatsClear(const char *, const char *);
 #define STATS_SECT_DECL(__name)         struct stats_ ## __name
 #define STATS_SECT_END                  };
 
@@ -38,14 +40,14 @@ extern "C" {
 #define STATS_SECT_ENTRY16(__var)
 #define STATS_SECT_ENTRY32(__var)
 #define STATS_SECT_ENTRY64(__var)
-#define STATS_RESET(__var)
+#define STATS_RESET(__var) 
 
 #define STATS_SIZE_INIT_PARMS(__sectvarname, __size) \
                                         0, 0
 
-#define STATS_INC(__sectvarname, __var)
-#define STATS_INCN(__sectvarname, __var, __n)
-#define STATS_CLEAR(__sectvarname, __var)
+#define STATS_INC(__sectvarname, __var) StatsInc(#__sectvarname, #__var, 1)
+#define STATS_INCN(__sectvarname, __var, __n) StatsInc(#__sectvarname, #__var, __n)
+#define STATS_CLEAR(__sectvarname, __var) StatsClear(#__sectvarname, #__var)
 
 #define STATS_NAME_START(__name)
 #define STATS_NAME(__name, __entry)
